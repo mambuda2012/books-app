@@ -1,24 +1,35 @@
 {
-  "name": "book",
-  "author": "Mazmanyan Yura",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "type": "module",
-  "keywords": [
-    "books"
-  ],
-  "scripts": {
-    "build": "rollup -c --watch",
-    "start": "live-server"
-  },
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^9.39.2",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "eslint": "^9.39.2",
-    "globals": "^16.5.0",
-    "rollup": "^4.54.0",
-    "rollup-plugin-import-css": "^4.1.2"
-  }
+    "name": "book",
+    "author": "Mazmanyan Yura",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "keywords": [
+        "books"
+    ],
+    "scripts": {
+        "build": "rollup -c --watch",
+        "start": "live-server",
+        "eslint:fix": "eslint --fix .",
+        "prettier": "prettier --check .",
+        "prettier:fix": "prettier --write .",
+        "stylelint": "stylelint **/*.{css,js}",
+        "stylelint:fix": "stylelint **/*.{css,scss} --fix"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@eslint/js": "^9.39.2",
+        "@rollup/plugin-node-resolve": "^16.0.3",
+        "eslint": "^9.39.2",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^16.5.0",
+        "prettier": "^3.7.4",
+        "rollup": "^4.54.0",
+        "rollup-plugin-import-css": "^4.1.2",
+        "stylelint": "^16.26.1",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-standard": "^39.0.1",
+        "stylelint-order": "^7.0.0"
+    }
 }
