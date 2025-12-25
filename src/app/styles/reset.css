@@ -108,9 +108,3 @@ legend {
 input[type='file'] {
     max-width: 100%;
 }
-
-body {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: sans-serif;
-}
