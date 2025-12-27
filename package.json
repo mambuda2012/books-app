@@ -31,5 +31,8 @@
         "stylelint-config-rational-order": "^0.1.2",
         "stylelint-config-standard": "^39.0.1",
         "stylelint-order": "^7.0.0"
+    },
+    "dependencies": {
+        "on-change": "^6.0.1"
     }
 }

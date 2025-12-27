@@ -7,7 +7,6 @@ class BookDetailView extends AbstractView {
         this.setTitle('Описание книг')
     }
 
-    
     render() {
         const main = document.createElement('div')
         main.innerHTML = `Описание книги`
