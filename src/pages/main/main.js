@@ -1,4 +1,5 @@
 import AbstractView from '../../shared/view.js'
+import { Header } from '../../widget/Header/Header.js'
 
 class MainView extends AbstractView {
     state = {
@@ -14,12 +15,15 @@ class MainView extends AbstractView {
         this.setTitle('Поиск книг')
     }
 
-    
     render() {
         const main = document.createElement('div')
-        main.innerHTML = `Число книг: ${this.appState.favorites.length}`
         this.app.innerHTML = ''
         this.app.append(main)
+        this.renderHeader()
+    }
+    renderHeader() {
+        const header = new Header(this.appState).render()
+        this.app.prepend(header)
     }
 }
 

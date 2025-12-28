@@ -2,4 +2,15 @@ body {
     font-size: 16px;
     font-weight: 400;
     font-family: sans-serif;
+    color: var(--black);
+}
+
+#root {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+:root {
+    --black: #121212;
+    --white: #fafafa;
 }

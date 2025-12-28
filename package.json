@@ -11,11 +11,12 @@
     "scripts": {
         "build": "rollup -c --watch",
         "start": "live-server",
-        "eslint:fix": "eslint --fix .",
-        "prettier": "prettier --check .",
-        "prettier:fix": "prettier --write .",
-        "stylelint": "stylelint **/*.{css,js}",
-        "stylelint:fix": "stylelint **/*.{css,scss} --fix"
+        "eslint": "eslint --fix ./src/**/*.js && eslint --fix ./dist/**/*.js",
+        "eslint:fix": "eslint --fix ./src/**/*.js && eslint --fix ./dist/**/*.js",
+        "prettier": "prettier --check '**/*.{js,css}'",
+        "prettier:fix": "prettier --write '**/*.{js,css}'",
+        "stylelint": "stylelint './src/**/*.css' './dist/**/*.css'",
+        "stylelint:fix": "stylelint './src/**/*.css' './dist/**/*.css' --fix"
     },
     "license": "ISC",
     "devDependencies": {
