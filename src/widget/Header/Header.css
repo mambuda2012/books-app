@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.item__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.menu__counter {
+    text-align: center;
+    border: 1px solid var(--black);
+    border-radius: 50%;
+    padding: 10px 12px;
+}
+
+.menu__item:visited {
+    color: var(--black);
+}

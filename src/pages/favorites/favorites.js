@@ -6,7 +6,6 @@ class FavoritesView extends AbstractView {
         this.setTitle('Избранные книг')
     }
 
-    
     render() {
         const main = document.createElement('div')
         main.innerHTML = `Избранные книги`

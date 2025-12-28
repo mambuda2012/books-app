@@ -26,7 +26,6 @@
             this.setTitle('Описание книг');
         }
 
-        
         render() {
             const main = document.createElement('div');
             main.innerHTML = `Описание книги`;
@@ -41,12 +40,59 @@
             this.setTitle('Избранные книг');
         }
 
-        
         render() {
             const main = document.createElement('div');
             main.innerHTML = `Избранные книги`;
             this.app.innerHTML = '';
             this.app.append(main);
+        }
+    }
+
+    class DivComponent {
+        constructor() {
+            this.element = document.createElement('div');
+        }
+        render() {
+            this.element;
+        }
+    }
+
+    class Header extends DivComponent {
+        constructor(appState) {
+            super();
+            this.appState = appState;
+            this.element = document.createElement('header');
+        }
+        render() {
+            this.element.innerHTML = '';
+            this.element.classList.add('header');
+            this.element.innerHTML = `
+            <img src='src/assets/svg/logo.svg' />
+            <nav>
+                <ul class='menu'>
+                    <li class='menu__item'>
+                        <a href="#" class='item__link'>
+                            <img src='src/assets/svg/search.svg' />
+                            Поиск книг
+                        </a>
+                    </li>
+                    <li class='menu__item'>
+                        <a href="#favorites" class='item__link'>
+                            <img src='src/assets/svg/favorites.svg' />
+                            Избранное
+                        </a>
+                    </li>
+                    <li class='menu__item'>
+                        <a href="#" class='item__link'>
+                          <div class="menu__counter">
+														${this.appState.favorites.length}
+													</div>
+                        </a>
+                    </li>
+                </ul>
+            <nav />
+		  `;
+            return this.element
         }
     }
 
@@ -64,12 +110,15 @@
             this.setTitle('Поиск книг');
         }
 
-        
         render() {
             const main = document.createElement('div');
-            main.innerHTML = `Число книг: ${this.appState.favorites.length}`;
             this.app.innerHTML = '';
             this.app.append(main);
+            this.renderHeader();
+        }
+        renderHeader() {
+            const header = new Header(this.appState).render();
+            this.app.prepend(header);
         }
     }
 
@@ -91,6 +140,8 @@
         appState = {
             favorites: [],
         }
+
+        
         constructor() {
             window.addEventListener('hashchange', this.route.bind(this));
             this.route();
